@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: ligotools
+Version: 0.1.0
+Summary: LIGO tools for STAT 159 HW3
+Author: LIGO Scientific Collaboration (LSC), <Sunghyun Ahn>
+Project-URL: Homepage, https://github.com/UCB-stat-159-f25/hw3-Sunghyunahn123
+Project-URL: Issues, https://github.com/UCB-stat-159-f25/hw3-Sunghyunahn123/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.0
+Requires-Dist: scipy>=1.13
+Requires-Dist: h5py>=3.12
+Requires-Dist: matplotlib>=3.9
+Requires-Dist: pytest>=7.0
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/wOo27OxG)

@@ -1,1 +1,12 @@
- I used ChatGPT (GPT-5) as an assistant to how to code to setup path updating raw data, figure, and audio output paths to use structured folders (data/, figures/, audio/).
+[Update: Repository structure & paths ]
+What I asked:
+- How to refactor the LOSC tutorial notebook so raw inputs load from data/, and all figures/audio save into figures/ and audio/.
+
+What I used from ChatGPT:
+- The high-level plan to (1) move *.hdf5 and *.json into data/, (2) change load paths (fnjson, fn_H1, fn_L1, fn_template) to "data/...", and (3) change all save paths to figures/ or audio/.
+- A code pattern using pathlib for figure saving, e.g.:
+    plt.savefig(str(FIG_DIR / f"{eventname}_H1_spectrogram.{plottype}"))
+
+What I learned:
+- Keep the tutorial’s eventname-based output naming convention while redirecting destinations to structured folders.
+- Use pathlib Paths (FIG_DIR, AUDIO_DIR) for clearer I/O and OS-independent paths.

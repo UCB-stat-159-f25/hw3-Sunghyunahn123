@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "numpy>=1.23"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligotools"
+version = "0.1.0"
+description = "LIGO tools for STAT 159 HW3"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "LIGO Scientific Collaboration (LSC)" },
+  { name = "<Sunghyun Ahn>" }  
+]
+# environment.yml 과 일치하도록
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.13",
+  "h5py>=3.12",
+  "matplotlib>=3.9",
+  "pytest>=7.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/UCB-stat-159-f25/hw3-Sunghyunahn123"
+Issues    = "https://github.com/UCB-stat-159-f25/hw3-Sunghyunahn123/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ligotools*"]
