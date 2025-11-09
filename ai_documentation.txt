@@ -2,11 +2,16 @@
 What I asked:
 - How to refactor the LOSC tutorial notebook so raw inputs load from data/, and all figures/audio save into figures/ and audio/.
 
-What I used from ChatGPT:
+What I GOT:
 - The high-level plan to (1) move *.hdf5 and *.json into data/, (2) change load paths (fnjson, fn_H1, fn_L1, fn_template) to "data/...", and (3) change all save paths to figures/ or audio/.
 - A code pattern using pathlib for figure saving, e.g.:
     plt.savefig(str(FIG_DIR / f"{eventname}_H1_spectrogram.{plottype}"))
-
-What I learned:
 - Keep the tutorial’s eventname-based output naming convention while redirecting destinations to structured folders.
-- Use pathlib Paths (FIG_DIR, AUDIO_DIR) for clearer I/O and OS-independent paths.
+- Use pathlib Paths (FIG_DIR, AUDIO_DIR) 
+
+[Update: Add tests for readligo.py]
+What I asked:
+What to test for in readligo.py and how to structure basic pytest functions.
+What I GOT:
+Guidance that good tests should confirm data consistency (matching lengths, valid numeric values, and presence of data-quality segments).
+The idea to keep tests minimal: one for loaddata() output structure and one for dq_channel_to_seglist() behavior.
