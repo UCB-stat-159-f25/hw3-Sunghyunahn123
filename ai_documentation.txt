@@ -15,3 +15,13 @@ What to test for in readligo.py and how to structure basic pytest functions.
 What I GOT:
 Guidance that good tests should confirm data consistency (matching lengths, valid numeric values, and presence of data-quality segments).
 The idea to keep tests minimal: one for loaddata() output structure and one for dq_channel_to_seglist() behavior.
+
+[Update: Add tests for Makefile]
+What I asked:
+I used ChatGPT (GPT-5) to clarify how to structure a Makefile that automates the main workflow.
+I asked about the general approach for setting up environment creation, building the MyST site, and cleaning output folders.
+Based on the guidance, I wrote a minimal Makefile with three basic targets (env, html, and clean) that handle these tasks automatically.
+
+After testing each command on JupyterHub, everything worked as expected —
+the environment built correctly, the MyST site rendered locally, and the cleanup step removed temporary files.
+This helped me better understand how Make can streamline reproducible workflows without manual setup each time.
